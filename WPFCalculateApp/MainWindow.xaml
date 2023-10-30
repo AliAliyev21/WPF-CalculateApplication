@@ -52,6 +52,10 @@
                                             </Border>
                                         </ControlTemplate>
                                     </Button.Template>
+
+                                    <Button.BitmapEffect>
+                                        <DropShadowBitmapEffect Color="Pink" Direction="50"/>
+                                    </Button.BitmapEffect>
                                 </Button>
                             </UniformGrid>
                         </Grid>
@@ -69,6 +73,9 @@
                                             </Border>
                                         </ControlTemplate>
                                     </Button.Template>
+                                    <Button.BitmapEffect>
+                                        <DropShadowBitmapEffect Color="Pink" Direction="50"/>
+                                    </Button.BitmapEffect>
                                 </Button>
                             </UniformGrid>
                         </Grid>
@@ -88,6 +95,9 @@
                                             </Border>
                                         </ControlTemplate>
                                     </Button.Template>
+                                    <Button.BitmapEffect>
+                                        <DropShadowBitmapEffect Color="Pink" Direction="50"/>
+                                    </Button.BitmapEffect>
                                 </Button>
                             </UniformGrid>
                         </Grid>
@@ -107,6 +117,9 @@
                                             </Border>
                                         </ControlTemplate>
                                     </Button.Template>
+                                    <Button.BitmapEffect>
+                                        <DropShadowBitmapEffect Color="Pink" Direction="50"/>
+                                    </Button.BitmapEffect>
                                 </Button>
                             </UniformGrid>
                         </Grid>
@@ -120,6 +133,9 @@
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
+                        <Button.BitmapEffect>
+                            <DropShadowBitmapEffect Color="LightSteelBlue" Direction="250"/>
+                        </Button.BitmapEffect>
                     </Button>
 
 
@@ -131,6 +147,9 @@
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
+                        <Button.BitmapEffect>
+                            <DropShadowBitmapEffect Color="LightSteelBlue" Direction="250"/>
+                        </Button.BitmapEffect>
                     </Button>
 
 
