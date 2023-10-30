@@ -1,0 +1,160 @@
+﻿<Window x:Class="WPFCalculateApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFCalculateApp"
+        mc:Ignorable="d"
+        Title="Calculate" Height="490" Width="290" WindowStartupLocation="CenterScreen" Background="Aqua" >
+    <Border Margin="15" Background="White" CornerRadius="40">
+        <Canvas Width="260">
+            <Label Name="label"
+                   Width="47"
+                   Height="24"
+                   Content="00:00"
+                   FontWeight="Bold"
+                   FontSize="12"
+                   FontFamily="Comic Sans MS"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="15,7,0,0"
+                   Foreground="Black">
+
+            </Label>
+
+           
+            <TextBox  Name="result" Width="210" Height="30" Canvas.Top="50" Canvas.Left="18" FontSize="20" Text="0" TextAlignment="Right" Foreground="DeepPink" >
+                  
+            </TextBox>
+            
+            
+            
+            <Border Height="320" Width="220" Background="#E7ECE9" Margin="13,90,0,0" CornerRadius="30">
+                <Canvas>
+                    <Grid Margin="0,10,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid Grid.Row="0">
+                            <UniformGrid Rows="1" Columns="4" Margin="10,12,0,0">
+                                <Button Name="Button7"  Click="Button7_Click" BorderBrush="#E7ECE9" Content="7" Width="50" Height="50" FontSize="18" Background="#E7ECE9" Foreground="Black"/>
+                                <Button Name="Button8"  Click="Button7_Click" BorderBrush="#E7ECE9" Content="8" Width="50" Height="50" FontSize="18" Background="#E7ECE9" Foreground="Black"/>
+                                <Button Name="Button9"  Click="Button7_Click" BorderBrush="#E7ECE9" Content="9" Width="50" Height="50" FontSize="18" Background="#E7ECE9" Foreground="Black"/>
+                                <Button Name="ButtonPlus" Click="Operator_Click" BorderBrush="#E7ECE9" Content="+" Width="50" Height="50" FontSize="20" Background="#E7ECE9" Foreground="DeepPink">
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="LightPink" CornerRadius="25">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </UniformGrid>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <UniformGrid Rows="1" Columns="4" Margin="10,0,0,0">
+                                <Button Name="Button4" Click="Button7_Click" BorderBrush="#E7ECE9" Content="4" Width="50" Height="50" FontSize="18" Background="#E7ECE9" Foreground="Black"/>
+                                <Button Name="Button5" Click="Button7_Click" BorderBrush="#E7ECE9" Content="5" Width="50" Height="50" FontSize="18" Background="#E7ECE9" Foreground="Black"/>
+                                <Button Name="Button6" Click="Button7_Click" BorderBrush="#E7ECE9" Content="6" Width="50" Height="50" FontSize="18" Background="#E7ECE9" Foreground="Black"/>
+                                <Button Name="ButtonMinus" Click="Operator_Click" BorderBrush="#E7ECE9" Content="-" Width="50" Height="50" FontSize="20" Background="#E7ECE9" Foreground="DeepPink">
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="LightPink" CornerRadius="25">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </UniformGrid>
+                        </Grid>
+
+
+
+                        <Grid Grid.Row="2">
+                            <UniformGrid Rows="1" Columns="4" Margin="10,0,0,0">
+                                <Button Name="Button1" Click="Button7_Click" BorderBrush="#E7ECE9" Content="1" Height="50" FontSize="18" Background="#E7ECE9" Foreground="Black"/>
+                                <Button Name="Button2" Click="Button7_Click" BorderBrush="#E7ECE9" Content="2" Height="50" FontSize="18" Background="#E7ECE9" Foreground="Black"/>
+                                <Button Name="Button3" Click="Button7_Click" BorderBrush="#E7ECE9" Content="3" Height="50" FontSize="18" Background="#E7ECE9" Foreground="Black"/>
+                                <Button Name="ButtonMultiply" Click="Operator_Click" BorderBrush="#E7ECE9" Content="*" Width="50" Height="50" FontSize="20" Background="#E7ECE9" Foreground="DeepPink">
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="LightPink" CornerRadius="25">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </UniformGrid>
+                        </Grid>
+
+
+
+                        <Grid Grid.Row="3">
+                            <UniformGrid Rows="1" Columns="4" Margin="10,0,0,0">
+                                <Button Name="Button0" BorderBrush="#E7ECE9" Content="0" Width="50" Height="50" FontSize="18" Background="#E7ECE9" Foreground="Black"/>
+                                <Button Name="ButtonDecimal" Click="Decimal_Click" BorderBrush="#E7ECE9" Content="." Width="50" Height="50" FontSize="25" Background="#E7ECE9" Foreground="Black"/>
+                                <Button Name="ButtonClear" Click="Clear_Click" BorderBrush="#E7ECE9" Content="C" Width="50" Height="50" FontSize="18" Background="#E7ECE9" Foreground="Black"/>
+                                <Button Name="ButtonDivide" Click="Operator_Click" BorderBrush="#E7ECE9" Content="/" Width="50" Height="50" FontSize="20" Background="#E7ECE9" Foreground="DeepPink">
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Background="LightPink" CornerRadius="25">
+                                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                            </Border>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </UniformGrid>
+                        </Grid>
+                    </Grid>
+
+                    <Button Name="ButtonEquals" Click="Equals_Click" BorderBrush="#E7ECE9" Content="=" Width="130" Height="50" Canvas.Left="20" Canvas.Top="223" FontSize="30" Background="#4D5DA3">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="#6172BC" CornerRadius="25">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+
+                    <Button Name="ButtonClearLast" Click="ClearLast_Click" BorderBrush="#E7ECE9" Content="X" Width="50" Height="50" Canvas.Left="160" Canvas.Top="223" FontSize="20" Background="#E7ECE9" Foreground="Black">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="#6172BC" CornerRadius="25">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+
+                    <Button Width="110" Height="7" Canvas.Left="60" Canvas.Top="307">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="#C7BFBF" CornerRadius="6">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Canvas>
+            </Border>
+
+           
+            <Rectangle Width="60" Height="6" Fill="#C7BFBF" RadiusX="6" RadiusY="6" Canvas.Left="95" Canvas.Top="10"/>
+
+            <Rectangle Width="8" Height="8" Fill="#C7BFBF" RadiusX="6" RadiusY="6" Canvas.Left="160" Canvas.Top="10"/>
+            
+            <Image Source="/Images/Baterry.png" Width="20" Height="20" Canvas.Left="225" Canvas.Top="8"/>
+            <Image Source="/Images/Wifi.png" Width="15" Height="20" Canvas.Left="210" Canvas.Top="8"/>
+            <Image Source="/Images/Siqnal.png" Width="12" Height="20" Canvas.Left="196" Canvas.Top="8"/>
+
+        </Canvas>
+    </Border>
+</Window>
